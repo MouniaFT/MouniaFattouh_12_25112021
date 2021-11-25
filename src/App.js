@@ -1,8 +1,11 @@
+import Header from './components/Header'
+import { BrowserRouter as Router } from 'react-router-dom'
+
 function App() {
   return (
-    <div>
-      <header>hello</header>
-    </div>
+    <Router>
+      <Header />
+    </Router>
   )
 }
 
