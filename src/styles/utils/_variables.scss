@@ -1,20 +1,13 @@
 // color
-$color-red1: #FF0000;
-$color-red2: #E60000;
-$color-grey1: #9B9EAC;
-$color-grey2: #74798C;
-$color-white: #FFFFFF;
+$color-red1: #ff0000;
+$color-red2: #e60000;
+$color-grey1: #9b9eac;
+$color-grey2: #74798c;
+$color-white: #ffffff;
 $color-black1: #000000;
 $color-black2: #020203;
-$color-black3: #282D30;
-$color-black4: #20253A;
+$color-black3: #282d30;
+$color-black4: #20253a;
 
 // typo
 $font-family: 'Roboto', sans-serif;
-
-
-// breakpoints
-$breakpoints:(
-    tablets: 768px,
-    desktops: 1280px
-);
