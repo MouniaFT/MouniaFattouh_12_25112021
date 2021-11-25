@@ -1,0 +1,32 @@
+.footer {
+  background-color: $color-black2;
+  width: 117px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: calc(100% - 105px);
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &_nav {
+    .footer_icon {
+      margin: 20px 0;
+    }
+  }
+
+  &_copiryght {
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-white;
+    transform: rotate(-90deg);
+    min-width: 138px;
+    position: absolute;
+    bottom: 90px;
+  }
+}
