@@ -9,6 +9,11 @@ body {
   padding: 0 40px;
   max-width: 1204px;
   margin: 0 auto;
+
+  &-l {
+    padding: 0 30px;
+    max-width: 1500px;
+  }
 }
 
 a {

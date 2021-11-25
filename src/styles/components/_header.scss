@@ -1,0 +1,21 @@
+.header {
+  background-color: $color-black2;
+  padding: 20px 0;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &_nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -5px;
+    padding: 0 50px 5px 150px;
+    width: 100%;
+    .nav-item {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0 5px;
+    }
+  }
+}
