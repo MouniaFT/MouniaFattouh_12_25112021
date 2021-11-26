@@ -1,0 +1,19 @@
+.welcome {
+  padding-top: 68px;
+  margin-left: 117px;
+  &_title {
+    font-size: 48px;
+    font-weight: 500;
+    color: $color-black1;
+    .title-firstname {
+      color: $color-red1;
+      margin-left: 10px;
+    }
+  }
+
+  &_para {
+    font-size: 18px;
+    color: $color-black1;
+    margin-top: 30px;
+  }
+}
