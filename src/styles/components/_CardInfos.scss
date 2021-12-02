@@ -1,0 +1,29 @@
+.card_infos {
+  padding: 32px;
+  background-color: $color-grey3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: 258px;
+  margin-bottom: 39px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &_text {
+    margin-left: 24px;
+    .card_infos_qte {
+      font-weight: 700;
+      font-size: 20px;
+      color: $color-black3;
+    }
+
+    .card_infos_type {
+      font-weight: 500;
+      font-size: 14px;
+      color: $color-grey2;
+    }
+  }
+}
