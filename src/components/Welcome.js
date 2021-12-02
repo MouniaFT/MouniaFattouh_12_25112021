@@ -1,8 +1,4 @@
-import { userData } from '../mocks/data-user.js'
-
-function Welcome() {
-  const user = userData.find((user) => user.id === 12)
-
+function Welcome({ user }) {
   return (
     <section className="welcome">
       <div className="container">

@@ -1,15 +1,13 @@
 import Header from './components/Header'
 import { BrowserRouter as Router } from 'react-router-dom'
 import FooterSidBar from './components/FooterSidBar'
-import Welcome from './components/Welcome'
-import ChartActivity from './components/ChartActivity'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
     <Router>
       <Header />
-      <Welcome />
-      <ChartActivity />
+      <Dashboard />
       <FooterSidBar />
     </Router>
   )
