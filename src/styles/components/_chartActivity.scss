@@ -1,0 +1,27 @@
+.chart_activity {
+  margin-top: 85px;
+  margin-left: 117px;
+  height: 320px;
+  &_title {
+    font-weight: 500;
+    color: $color-black4;
+    margin-bottom: -44px;
+    margin-left: 25px;
+  }
+  .recharts-responsive-container {
+    background-color: $color-grey3;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+    .recharts-legend-wrapper {
+      position: absolute;
+      right: 36px !important;
+      top: 25px !important;
+      .recharts-legend-item-text {
+        font-weight: 500;
+        font-size: 14px;
+        color: $color-grey2 !important;
+        margin-left: 12px;
+      }
+    }
+  }
+}
