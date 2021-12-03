@@ -6,10 +6,10 @@ import calories from '../images/calories.svg'
 import protein from '../images/protein.svg'
 import carbs from '../images/carbs.svg'
 import fat from '../images/fat.svg'
+import RadarChartPerformance from '../components/ChartRadarPerformance'
 
 function Dashboard() {
   const user = userData.find((user) => user.id === 12)
-  console.log(user.keyData.calorieCount)
 
   return (
     <main>
@@ -18,6 +18,7 @@ function Dashboard() {
         <div className="charts">
           <div>
             <ChartActivity user={user} />
+            <RadarChartPerformance />
           </div>
           <aside>
             <CardInfos
