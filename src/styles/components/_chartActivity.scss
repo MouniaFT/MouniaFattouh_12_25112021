@@ -1,12 +1,12 @@
 .chart_activity {
-  margin-top: 85px;
-  margin-left: 117px;
   height: 320px;
+  position: relative;
   &_title {
     font-weight: 500;
     color: $color-black4;
-    margin-bottom: -44px;
     margin-left: 25px;
+    position: absolute;
+    top: 25px;
   }
   .recharts-responsive-container {
     background-color: $color-grey3;

@@ -13,12 +13,14 @@ function Dashboard() {
 
   return (
     <main>
-      <div className="container">
+      <div className="container container-main">
         <Welcome user={user} />
         <div className="charts">
-          <div>
+          <div className="charts_content">
             <ChartActivity user={user} />
-            <RadarChartPerformance />
+            <div className="charts-group">
+              <RadarChartPerformance />
+            </div>
           </div>
           <aside>
             <CardInfos

@@ -1,0 +1,13 @@
+.charts {
+  display: flex;
+  margin-top: 77px;
+
+  &_content {
+    margin-right: 31px;
+    width: calc(100% - 289px);
+  }
+
+  .aside {
+    width: 258px;
+  }
+}

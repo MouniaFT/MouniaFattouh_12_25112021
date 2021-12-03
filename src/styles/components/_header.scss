@@ -1,6 +1,8 @@
 .header {
   background-color: $color-black2;
   padding: 20px 0;
+  position: relative;
+  z-index: 5;
   .container {
     display: flex;
     align-items: center;

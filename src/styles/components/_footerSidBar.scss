@@ -3,8 +3,9 @@
   width: 117px;
   position: fixed;
   left: 0;
-  bottom: 0;
-  height: calc(100% - 105px);
+  top: 0;
+  height: 100%;
+  z-index: 4;
 
   &_content {
     display: flex;
