@@ -1,0 +1,10 @@
+.custom_tooltip_average {
+  background-color: $color-white;
+  padding: 7px;
+
+  &_text {
+    color: $color-black1;
+    font-weight: 500px;
+    font-size: 10px;
+  }
+}

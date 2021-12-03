@@ -7,6 +7,7 @@ import protein from '../images/protein.svg'
 import carbs from '../images/carbs.svg'
 import fat from '../images/fat.svg'
 import RadarChartPerformance from '../components/ChartRadarPerformance'
+import ChartLineAverage from '../components/ChartLineAverage'
 
 function Dashboard() {
   const user = userData.find((user) => user.id === 12)
@@ -20,6 +21,7 @@ function Dashboard() {
             <ChartActivity user={user} />
             <div className="charts-group">
               <RadarChartPerformance />
+              <ChartLineAverage />
             </div>
           </div>
           <aside>
