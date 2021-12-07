@@ -18,7 +18,9 @@ function RadarChartPerformance() {
           <PolarAngleAxis
             tick={{ fill: '#FFFFFF', fontSize: '12px', fontWeight: 500 }}
             fill="white"
-            dataKey={user.kind[0]}
+            dataKey="kind"
+            // replace kind number with category kind
+            tickFormatter={(kind) => user.kind[kind]}
           />
           <Radar dataKey="value" fill="rgba(255, 1, 1, 0.7)" />
         </RadarChart>
