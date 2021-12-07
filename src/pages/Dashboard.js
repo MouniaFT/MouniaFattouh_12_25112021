@@ -8,9 +8,15 @@ import carbs from '../images/carbs.svg'
 import fat from '../images/fat.svg'
 import RadarChartPerformance from '../components/ChartRadarPerformance'
 import ChartLineAverage from '../components/ChartLineAverage'
+import { useEffect } from 'react'
+import fetchData from '../service'
 
 function Dashboard() {
   const user = userData.find((user) => user.id === 12)
+
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   return (
     <main>
