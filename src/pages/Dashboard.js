@@ -10,6 +10,7 @@ import RadarChartPerformance from '../components/ChartRadarPerformance'
 import ChartLineAverage from '../components/ChartLineAverage'
 import { useEffect } from 'react'
 import fetchData from '../service'
+import ChartScore from '../components/ChartScore'
 
 function Dashboard() {
   const user = userData.find((user) => user.id === 12)
@@ -28,6 +29,7 @@ function Dashboard() {
             <div className="charts-group">
               <RadarChartPerformance />
               <ChartLineAverage />
+              <ChartScore />
             </div>
           </div>
           <aside>
