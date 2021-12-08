@@ -1,5 +1,6 @@
 .chart_line_average {
-  background-color: $color-red1;
+  position: relative;
+  background: linear-gradient(to right, $color-red1 72%, $color-red2 72% 100%);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
 
@@ -7,6 +8,9 @@
     font-weight: 500;
     color: $color-white;
     opacity: 0.5;
-    padding: 29px 34px 0 34px;
+    position: absolute;
+    top: 29px;
+    left: 34px;
+    width: 147px;
   }
 }
