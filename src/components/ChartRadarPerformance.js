@@ -11,9 +11,9 @@ function RadarChartPerformance() {
   const user = userPerformance.find((user) => user.userId === 12)
 
   return (
-    <div className="chart_radar_performance">
+    <div className="chart_radar_performance chart-group-item">
       <ResponsiveContainer width="100%" height={263}>
-        <RadarChart cx="50%" cy="50%" outerRadius="60%" data={user.data}>
+        <RadarChart cx="50%" cy="50%" outerRadius="50%" data={user.data}>
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             tick={{ fill: '#FFFFFF', fontSize: '12px', fontWeight: 500 }}

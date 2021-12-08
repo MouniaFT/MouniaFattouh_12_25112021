@@ -10,4 +10,22 @@
   .aside {
     width: 258px;
   }
+
+  .charts-group {
+    .chart-group-item {
+      margin: 15px 0;
+    }
+  }
+
+  @media all and (min-width: 1280px) {
+    margin-bottom: 20px;
+    .charts-group {
+      display: flex;
+      margin: 0 -15px;
+      .chart-group-item {
+        margin: 15px;
+        width: calc(33.33% - 30px);
+      }
+    }
+  }
 }

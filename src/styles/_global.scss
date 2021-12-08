@@ -17,7 +17,13 @@ body {
 
   &-main {
     margin-left: 117px;
+    max-width: 1224px;
     padding: 0 50px;
+
+    @media all and (min-width: 1280px) {
+      padding: 0 100px;
+      max-width: 1324px;
+    }
   }
 }
 

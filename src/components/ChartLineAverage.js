@@ -23,7 +23,7 @@ function ChartLineAverage() {
   }
 
   return (
-    <div className="chart_line_average">
+    <div className="chart_line_average chart-group-item">
       <h2 className="chart_line_average_title">Durée moyenne des sessions</h2>
       <ResponsiveContainer width="100%" height={263}>
         <LineChart

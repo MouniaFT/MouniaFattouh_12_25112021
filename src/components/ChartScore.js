@@ -10,7 +10,7 @@ function ChartScore() {
   const user = userData.find((user) => user.id === 12)
 
   return (
-    <div className="chart_score">
+    <div className="chart_score chart-group-item">
       <h2 className="chart_score_title">Score</h2>
       <p className="chart_score_percentage">
         <span>{user.todayScore * 100}%</span>
@@ -21,8 +21,8 @@ function ChartScore() {
         <RadialBarChart
           cx="50%"
           cy="50%"
-          innerRadius="89%"
-          outerRadius="66%"
+          outerRadius={100}
+          innerRadius={85}
           barSize={10}
           // Transform todayScore into a percentage
           data={[{ todayScore: user.todayScore * 100 }]}

@@ -27,8 +27,8 @@ function Dashboard() {
           <div className="charts_content">
             <ChartActivity user={user} />
             <div className="charts-group">
-              <RadarChartPerformance />
               <ChartLineAverage />
+              <RadarChartPerformance />
               <ChartScore />
             </div>
           </div>
