@@ -8,11 +8,11 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts'
-import { userActivity } from '../mocks/data-user.js'
+// import { userActivity } from '../mocks/data-user.js'
 import CustomToolTipActivity from './CustomToolTipActivity.js'
 
-function ChartActivity() {
-  const user = userActivity.find((user) => user.userId === 12)
+function ChartActivity({ user }) {
+  // const user = userActivity.find((user) => user.userId === 12)
 
   /**
    * format the date to display only the day number
@@ -29,7 +29,7 @@ function ChartActivity() {
       <h2 className="chart_activity_title">Activité quotidienne</h2>
       <ResponsiveContainer width="100%" height={320}>
         <BarChart
-          data={user.sessions}
+          data={user?.sessions}
           margin={{ top: 70, right: 25, left: 25, bottom: 25 }}
           barGap={8}
           barSize={7}

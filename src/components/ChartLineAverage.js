@@ -6,11 +6,11 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
-import { userAverage } from '../mocks/data-user.js'
+// import { userAverage } from '../mocks/data-user.js'
 import CustomTooltipAverage from './CustomToolTipAverage.js'
 
-function ChartLineAverage() {
-  const user = userAverage.find((user) => user.userId === 12)
+function ChartLineAverage({ user }) {
+  // const user = userAverage.find((user) => user.userId === 12)
 
   /**
    * replace de number with the weekday
@@ -21,7 +21,6 @@ function ChartLineAverage() {
     const week = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' }
     return week[day]
   }
-
   return (
     <div className="chart_line_average chart-group-item">
       <h2 className="chart_line_average_title">Durée moyenne des sessions</h2>
@@ -29,7 +28,7 @@ function ChartLineAverage() {
         <LineChart
           width={500}
           height={300}
-          data={user.sessions}
+          data={user?.sessions}
           margin={{
             top: 5,
             right: 10,
