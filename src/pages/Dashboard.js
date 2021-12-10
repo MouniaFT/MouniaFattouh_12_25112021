@@ -16,6 +16,7 @@ import {
   fetchUserPerformance,
 } from '../service'
 import ChartScore from '../components/ChartScore'
+import { useParams } from 'react-router-dom'
 
 function Dashboard() {
   // const user = userData.find((user) => user.id === 12)
@@ -23,23 +24,24 @@ function Dashboard() {
   const [dataActivity, setDataActivity] = useState([])
   const [dataAverage, setDataAverage] = useState([])
   const [dataPerformance, setDataPerformance] = useState([])
+  const { id } = useParams()
 
   useEffect(() => {
     const getData = async () => {
-      const resultInfos = await fetchUserInfos(18)
+      const resultInfos = await fetchUserInfos(id)
       setDataInfos(resultInfos)
 
-      const resultActivity = await fetchUserActivity(18)
+      const resultActivity = await fetchUserActivity(id)
       setDataActivity(resultActivity)
 
-      const resultAverage = await fetchUserAverage(18)
+      const resultAverage = await fetchUserAverage(id)
       setDataAverage(resultAverage)
 
-      const resultPerformance = await fetchUserPerformance(18)
+      const resultPerformance = await fetchUserPerformance(id)
       setDataPerformance(resultPerformance)
     }
     getData()
-  }, [])
+  }, [id])
 
   if (dataInfos.length === 0) {
     return <div className="loading">Loading...</div>
