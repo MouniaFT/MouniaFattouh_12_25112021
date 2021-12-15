@@ -1,6 +1,6 @@
 import Welcome from '../components/Welcome'
 import ChartActivity from '../components/ChartActivity'
-// import { userData } from '../mocks/data-user.js'
+import { userData } from '../mocks/data-user.js'
 import CardInfos from '../components/CardInfos'
 import calories from '../images/calories.svg'
 import protein from '../images/protein.svg'
@@ -8,7 +8,7 @@ import carbs from '../images/carbs.svg'
 import fat from '../images/fat.svg'
 import RadarChartPerformance from '../components/ChartRadarPerformance'
 import ChartLineAverage from '../components/ChartLineAverage'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import {
   fetchUserInfos,
   fetchUserActivity,
@@ -17,16 +17,23 @@ import {
 } from '../service'
 import ChartScore from '../components/ChartScore'
 import { useParams } from 'react-router-dom'
+import { DataMockContext } from '../contexts/DataMockContext'
 
 function Dashboard() {
-  // const user = userData.find((user) => user.id === 12)
   const [dataInfos, setDataInfos] = useState([])
   const [dataActivity, setDataActivity] = useState([])
   const [dataAverage, setDataAverage] = useState([])
   const [dataPerformance, setDataPerformance] = useState([])
   const { id } = useParams()
+  const [isLoading, setIsLoading] = useState(true)
+  const [isDataMock] = useContext(DataMockContext)
 
   useEffect(() => {
+    if (isDataMock) {
+      setDataInfos(userData.find((user) => user.id === parseInt(id)))
+      setIsLoading(false)
+      return
+    }
     const getData = async () => {
       const resultInfos = await fetchUserInfos(id)
       setDataInfos(resultInfos)
@@ -39,12 +46,17 @@ function Dashboard() {
 
       const resultPerformance = await fetchUserPerformance(id)
       setDataPerformance(resultPerformance)
+      setIsLoading(false)
     }
     getData()
-  }, [id])
+  }, [id, isDataMock])
 
-  if (dataInfos.length === 0) {
-    return <div className="loading">Loading...</div>
+  if (isLoading) {
+    return (
+      <div className="container container-main">
+        <p className="loading">Loading...</p>
+      </div>
+    )
   }
   return (
     <main>

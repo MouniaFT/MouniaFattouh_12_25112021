@@ -5,14 +5,8 @@ import {
   PolarAngleAxis,
   Radar,
 } from 'recharts'
-// import { userPerformance } from '../mocks/data-user.js'
 
 function RadarChartPerformance({ user }) {
-  // const user = userPerformance.find((user) => user.userId === 12)
-
-  if (user.length === 0) {
-    return <div className="loading">Loading...</div>
-  }
   return (
     <div className="chart_radar_performance chart-group-item">
       <ResponsiveContainer width="100%" height={263}>
