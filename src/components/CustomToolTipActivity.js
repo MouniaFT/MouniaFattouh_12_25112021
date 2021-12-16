@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 
+// A component to display the tooltip on hover in chartActivity
 function CustomToolTipActivity({ active, payload }) {
   if (active && payload && payload.length) {
     return (

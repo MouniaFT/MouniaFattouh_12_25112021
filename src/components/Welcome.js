@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 
+// A component to display firstName of user
 function Welcome({ user }) {
   return (
     <section className="welcome">

@@ -7,6 +7,7 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 
+// A component to display the type of activity carried out in the form of a radar chart
 function RadarChartPerformance({ user }) {
   return (
     <div className="chart_radar_performance chart-group-item">

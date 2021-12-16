@@ -11,6 +11,7 @@ import {
 import CustomToolTipActivity from './CustomToolTipActivity.js'
 import PropTypes from 'prop-types'
 
+// A component to display calories burned and kilograms per day
 function ChartActivity({ user }) {
   /**
    * format the date to display only the day number

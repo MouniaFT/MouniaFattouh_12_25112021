@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 
+// A component to display a card infos of calories, proteins, carbs or lipids data
 function CardInfos({ image, keyData, unit, type }) {
   return (
     <div className="card_infos">

@@ -32,6 +32,7 @@ function Dashboard() {
   const [isDataMock] = useContext(DataMockContext)
 
   useEffect(() => {
+    // Use Data Mock
     if (isDataMock) {
       setDataInfos(userData.find((user) => user.id === parseInt(id)))
       setDataActivity(userActivity.find((user) => user.userId === parseInt(id)))
@@ -42,6 +43,8 @@ function Dashboard() {
       setIsLoading(false)
       return
     }
+    // Use API
+    // Fetch data and save it in its state
     const getData = async () => {
       const resultInfos = await fetchUserInfos(id)
       setDataInfos(resultInfos)
