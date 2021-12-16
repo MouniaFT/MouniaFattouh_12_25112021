@@ -1,13 +1,3 @@
-// const fetchData = () => {
-//   fetch('http://localhost:3001/user/12')
-//     .then((response) => {
-//       return response.json()
-//     })
-//     .then((result) => {
-//       console.log(result)
-//     })
-// }
-
 export async function fetchUserInfos(id) {
   const response = await fetch(`http://localhost:3001/user/${id}`)
   const result = await response.json()

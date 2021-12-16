@@ -25,5 +25,4 @@ yarn-error.log*
 #vs code
 .vscode
 
-# Api
-/server
+
