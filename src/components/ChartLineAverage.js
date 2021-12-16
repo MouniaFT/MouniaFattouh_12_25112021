@@ -6,12 +6,9 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
-// import { userAverage } from '../mocks/data-user.js'
 import CustomTooltipAverage from './CustomToolTipAverage.js'
 
 function ChartLineAverage({ user }) {
-  // const user = userAverage.find((user) => user.userId === 12)
-
   /**
    * replace de number with the weekday
    * @param { Number } day number of weekday

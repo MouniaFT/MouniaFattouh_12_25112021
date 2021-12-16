@@ -4,16 +4,13 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from 'recharts'
-// import { userData } from '../mocks/data-user.js'
 
 function ChartScore({ user }) {
-  // const user = userData.find((user) => user.id === 12)
   const score = user?.score || user?.todayScore
   return (
     <div className="chart_score chart-group-item">
       <h2 className="chart_score_title">Score</h2>
       <p className="chart_score_percentage">
-        {/* <span>{user.todayScore * 100}%</span> */}
         <span>{score * 100}%</span>
         <br />
         de votre objectif
@@ -26,7 +23,6 @@ function ChartScore({ user }) {
           innerRadius={85}
           barSize={10}
           // Transform todayScore into a percentage
-          // data={[{ todayScore: user.todayScore * 100 }]}
           data={[{ score: score * 100 }]}
           startAngle={80}
           endAngle={430}

@@ -8,12 +8,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts'
-// import { userActivity } from '../mocks/data-user.js'
 import CustomToolTipActivity from './CustomToolTipActivity.js'
 
 function ChartActivity({ user }) {
-  // const user = userActivity.find((user) => user.userId === 12)
-
   /**
    * format the date to display only the day number
    * @param { String } day

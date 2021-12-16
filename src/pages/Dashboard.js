@@ -1,6 +1,9 @@
 import Welcome from '../components/Welcome'
 import ChartActivity from '../components/ChartActivity'
 import { userData } from '../mocks/data-user.js'
+import { userActivity } from '../mocks/data-user.js'
+import { userAverage } from '../mocks/data-user.js'
+import { userPerformance } from '../mocks/data-user.js'
 import CardInfos from '../components/CardInfos'
 import calories from '../images/calories.svg'
 import protein from '../images/protein.svg'
@@ -31,9 +34,15 @@ function Dashboard() {
   useEffect(() => {
     if (isDataMock) {
       setDataInfos(userData.find((user) => user.id === parseInt(id)))
+      setDataActivity(userActivity.find((user) => user.userId === parseInt(id)))
+      setDataAverage(userAverage.find((user) => user.userId === parseInt(id)))
+      setDataPerformance(
+        userPerformance.find((user) => user.userId === parseInt(id))
+      )
       setIsLoading(false)
       return
     }
+    console.log(isDataMock)
     const getData = async () => {
       const resultInfos = await fetchUserInfos(id)
       setDataInfos(resultInfos)
@@ -61,11 +70,9 @@ function Dashboard() {
   return (
     <main>
       <div className="container container-main">
-        {/* <Welcome user={user} /> */}
         <Welcome user={dataInfos} />
         <div className="charts">
           <div className="charts_content">
-            {/* <ChartActivity user={user} /> */}
             <ChartActivity user={dataActivity} />
             <div className="charts-group">
               <ChartLineAverage user={dataAverage} />
