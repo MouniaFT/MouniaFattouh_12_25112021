@@ -10,17 +10,17 @@ This project was created with Create React App.
 
 ## Prerequisites
 
-- <span style="color:blue">Nodejs v14.15.3</span>
-- <span style="color:blue">npm v6.14.9</span>
-- <span style="color:blue">Git</span> to clone the repository
+- <Nodejs v14.15.3>
+- <npm v6.14.9>
+- <Git> to clone the repository
 
 ## Launching the Project
 
 - Fork the repository
 - Clone it on your computer.
-- The <span style="color:blue">npm install</span> command will allow you to install the dependencies.
-- The <span style="color:blue">npm start-server</span> command will allow you to run the micro API.
-- The <span style="color:blue">npm start</span> command will allow you to run project in http://localhost:3000.
+- The <npm install> command will allow you to install the dependencies.
+- The <npm start-server> command will allow you to run the micro API.
+- The <npm start> command will allow you to run project in http://localhost:3000.
 - There are two users their URL are:
 - - http://localhost:3000/user/12
 - - http://localhost:3000/user/18
