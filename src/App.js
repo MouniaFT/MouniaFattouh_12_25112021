@@ -1,12 +1,12 @@
 import Header from './components/Header'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom'
 import FooterSidBar from './components/FooterSidBar'
 import Dashboard from './pages/Dashboard'
 import Home from './pages/Home'
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Header />
       <Route exact path="/">
         <Home />
@@ -15,7 +15,7 @@ function App() {
         <Dashboard />
       </Route>
       <FooterSidBar />
-    </Router>
+    </HashRouter>
   )
 }
 
