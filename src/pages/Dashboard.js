@@ -42,7 +42,6 @@ function Dashboard() {
       setIsLoading(false)
       return
     }
-    console.log(isDataMock)
     const getData = async () => {
       const resultInfos = await fetchUserInfos(id)
       setDataInfos(resultInfos)

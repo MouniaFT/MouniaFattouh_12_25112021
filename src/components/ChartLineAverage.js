@@ -7,6 +7,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import CustomTooltipAverage from './CustomToolTipAverage.js'
+import PropTypes from 'prop-types'
 
 function ChartLineAverage({ user }) {
   /**
@@ -70,6 +71,10 @@ function ChartLineAverage({ user }) {
       </ResponsiveContainer>
     </div>
   )
+}
+
+ChartLineAverage.prototype = {
+  user: PropTypes.array,
 }
 
 export default ChartLineAverage

@@ -9,7 +9,7 @@ function Home() {
     <main className="home">
       <div className="container container-main">
         <div className="radio-btn">
-          <label for="radio-one" className="group">
+          <label htmlFor="radio-one" className="group">
             API
             <input
               id="radio-one"
@@ -19,10 +19,10 @@ function Home() {
               defaultChecked={!isDataMock}
               onChange={() => setIsDataMock(false)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
 
-          <label for="radio-two" className="group">
+          <label htmlFor="radio-two" className="group">
             MOCK
             <input
               id="radio-two"
@@ -31,7 +31,7 @@ function Home() {
               name="data"
               onChange={() => setIsDataMock(true)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
         </div>
         <div className="link-user">

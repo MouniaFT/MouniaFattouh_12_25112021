@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Welcome({ user }) {
   return (
     <section className="welcome">
@@ -10,6 +12,10 @@ function Welcome({ user }) {
       </p>
     </section>
   )
+}
+
+Welcome.prototype = {
+  user: PropTypes.array,
 }
 
 export default Welcome

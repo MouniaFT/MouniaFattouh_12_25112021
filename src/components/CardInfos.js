@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function CardInfos({ image, keyData, unit, type }) {
   return (
     <div className="card_infos">
@@ -13,6 +15,13 @@ function CardInfos({ image, keyData, unit, type }) {
       </div>
     </div>
   )
+}
+
+CardInfos.prototype = {
+  image: PropTypes.string,
+  keyData: PropTypes.number,
+  unit: PropTypes.string,
+  type: PropTypes.string,
 }
 
 export default CardInfos

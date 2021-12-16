@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function CustomTooltipAverage({ active, payload }) {
   if (active && payload && payload.length) {
     return (
@@ -8,6 +10,11 @@ function CustomTooltipAverage({ active, payload }) {
   }
 
   return null
+}
+
+CustomTooltipAverage.prototype = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
 }
 
 export default CustomTooltipAverage

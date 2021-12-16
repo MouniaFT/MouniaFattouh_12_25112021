@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function CustomToolTipActivity({ active, payload }) {
   if (active && payload && payload.length) {
     return (
@@ -9,4 +11,10 @@ function CustomToolTipActivity({ active, payload }) {
   }
   return null
 }
+
+CustomToolTipActivity.prototype = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+}
+
 export default CustomToolTipActivity

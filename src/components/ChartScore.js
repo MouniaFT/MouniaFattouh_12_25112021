@@ -4,6 +4,7 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from 'recharts'
+import PropTypes from 'prop-types'
 
 function ChartScore({ user }) {
   const score = user?.score || user?.todayScore
@@ -39,6 +40,10 @@ function ChartScore({ user }) {
       </ResponsiveContainer>
     </div>
   )
+}
+
+ChartScore.prototype = {
+  user: PropTypes.array,
 }
 
 export default ChartScore

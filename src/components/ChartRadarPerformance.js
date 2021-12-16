@@ -5,6 +5,7 @@ import {
   PolarAngleAxis,
   Radar,
 } from 'recharts'
+import PropTypes from 'prop-types'
 
 function RadarChartPerformance({ user }) {
   return (
@@ -24,6 +25,10 @@ function RadarChartPerformance({ user }) {
       </ResponsiveContainer>
     </div>
   )
+}
+
+RadarChartPerformance.prototype = {
+  user: PropTypes.array,
 }
 
 export default RadarChartPerformance

@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import CustomToolTipActivity from './CustomToolTipActivity.js'
+import PropTypes from 'prop-types'
 
 function ChartActivity({ user }) {
   /**
@@ -73,5 +74,9 @@ function ChartActivity({ user }) {
       </ResponsiveContainer>
     </div>
   )
+}
+
+ChartActivity.prototype = {
+  user: PropTypes.array,
 }
 export default ChartActivity
