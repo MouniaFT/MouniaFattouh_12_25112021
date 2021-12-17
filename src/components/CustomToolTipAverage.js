@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types'
 
-// A component to display the tooltip on hover in chartLineAverage
+/**
+ * A component to display the tooltip on hover in chartLineAverage
+ * @param { boolean } active
+ * @param { array } payload
+ * @returns { React.Component }
+ */
 function CustomTooltipAverage({ active, payload }) {
   if (active && payload && payload.length) {
     return (

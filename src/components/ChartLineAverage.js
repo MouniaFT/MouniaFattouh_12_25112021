@@ -9,7 +9,11 @@ import {
 import CustomTooltipAverage from './CustomToolTipAverage.js'
 import PropTypes from 'prop-types'
 
-// A component to display the duration of the sessions per day
+/**
+ * A component to display the duration of the sessions per day
+ * @param { array } user data of user
+ * @returns { React.Component }
+ */
 function ChartLineAverage({ user }) {
   /**
    * replace de number with the weekday

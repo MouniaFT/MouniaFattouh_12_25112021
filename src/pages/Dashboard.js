@@ -11,7 +11,7 @@ import carbs from '../images/carbs.svg'
 import fat from '../images/fat.svg'
 import RadarChartPerformance from '../components/ChartRadarPerformance'
 import ChartLineAverage from '../components/ChartLineAverage'
-import { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import {
   fetchUserInfos,
   fetchUserActivity,
@@ -23,6 +23,10 @@ import { useParams } from 'react-router-dom'
 import { DataMockContext } from '../contexts/DataMockContext'
 import { UserInfosFormatter } from '../service'
 
+/**
+ * A component to display Dashboard page of user
+ * @returns { React.Component}
+ */
 function Dashboard() {
   const [dataInfos, setDataInfos] = useState([])
   const [dataActivity, setDataActivity] = useState([])
@@ -54,7 +58,6 @@ function Dashboard() {
       try {
         const resultInfos = await fetchUserInfos(id)
         setDataInfos(resultInfos)
-        console.log(resultInfos)
 
         const resultActivity = await fetchUserActivity(id)
         setDataActivity(resultActivity)

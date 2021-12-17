@@ -3,7 +3,12 @@ import swimmingIcon from '../images/swimmingIcon.svg'
 import yogaIcon from '../images/yogaIcon.svg'
 import bikingIcon from '../images/bikingIcon.svg'
 import bodybuildingIcon from '../images/bodybuildingIcon.svg'
+import React from 'react'
 
+/**
+ * A component to display Sidbar
+ * @returns { React.Component }
+ */
 function FooterSidBar() {
   return (
     <footer className="footer">

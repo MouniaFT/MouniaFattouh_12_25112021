@@ -10,8 +10,13 @@ import {
 } from 'recharts'
 import CustomToolTipActivity from './CustomToolTipActivity.js'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-// A component to display calories burned and kilograms per day
+/**
+ * A component to display calories burned and kilograms per day
+ * @param { array } user data of user
+ * @returns { React.Component }
+ */
 function ChartActivity({ user }) {
   /**
    * format the date to display only the day number

@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types'
 
-// A component to display the tooltip on hover in chartActivity
+/**
+ * A component to display the tooltip on hover in chartActivity
+ * @param { boolean } active
+ * @param { array } payload
+ * @returns { React.Component }
+ */
 function CustomToolTipActivity({ active, payload }) {
   if (active && payload && payload.length) {
     return (

@@ -1,6 +1,13 @@
 import PropTypes from 'prop-types'
 
-// A component to display a card infos of calories, proteins, carbs or lipids data
+/**
+ * A component to display a card infos of calories, proteins, carbs or lipids data
+ * @param { string } image icon card
+ * @param { number } kayData
+ * @param { string } unit
+ * @param { string } type
+ * @returns {React.Component}
+ */
 function CardInfos({ image, keyData, unit, type }) {
   return (
     <div className="card_infos">

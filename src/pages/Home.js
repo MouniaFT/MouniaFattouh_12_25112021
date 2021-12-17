@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { DataMockContext } from '../contexts/DataMockContext'
 
-// Create two radios to choose either API or DATA MOCK and two buttons to choose the user
+/**
+ * Create two radios to choose either API or DATA MOCK and two buttons to choose the user
+ * @returns { React.Component}
+ */
 function Home() {
   const [isDataMock, setIsDataMock] = useContext(DataMockContext)
 

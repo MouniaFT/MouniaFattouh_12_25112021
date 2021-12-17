@@ -6,7 +6,11 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 
-// A component to display the percentage of the average score
+/**
+ * A component to display the percentage of the average score
+ * @param { array } user data of user
+ * @returns { React.Component }
+ */
 function ChartScore({ user }) {
   const score = user?.score || user?.todayScore
   return (

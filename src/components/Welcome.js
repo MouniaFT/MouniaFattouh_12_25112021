@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types'
 
-// A component to display firstName of user
+/**
+ * A component to display firstName of user
+ * @param { array } user data of user
+ * @returns { React.Component }
+ */
 function Welcome({ user }) {
   return (
     <section className="welcome">

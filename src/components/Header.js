@@ -1,6 +1,10 @@
 import logo from '../images/logo.svg'
 import { Link } from 'react-router-dom'
 
+/**
+ * A component to display Header
+ * @returns { React.Component }
+ */
 function Header() {
   return (
     <div className="header">
