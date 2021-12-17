@@ -8,12 +8,14 @@ This project was created with `Create React App`.
 
 - [NodeJS](https://nodejs.org/en/) v14.15.3
 - [npm](https://www.npmjs.com/) v6.14.9
+- [VSCode](https://code.visualstudio.com/download) is recommended
 
 ## Launching the Project
 
 - Fork the repository
 - Clone it on your computer.
 - The `npm install` command will allow you to install the dependencies.
+- The `npm install` in the server folder command will allow you to install the dependencies of micro API.
 - The `npm start-server` command will allow you to run the micro API.
 - The `npm start` command will allow you to run project in `http://localhost:3000` .
 - There are two users their URL are:
