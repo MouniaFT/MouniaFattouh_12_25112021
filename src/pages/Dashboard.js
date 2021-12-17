@@ -21,6 +21,7 @@ import {
 import ChartScore from '../components/ChartScore'
 import { useParams } from 'react-router-dom'
 import { DataMockContext } from '../contexts/DataMockContext'
+import { UserInfosFormatter } from '../service'
 
 function Dashboard() {
   const [dataInfos, setDataInfos] = useState([])
@@ -29,12 +30,16 @@ function Dashboard() {
   const [dataPerformance, setDataPerformance] = useState([])
   const { id } = useParams()
   const [isLoading, setIsLoading] = useState(true)
+  const [isError, setIsError] = useState(false)
   const [isDataMock] = useContext(DataMockContext)
 
   useEffect(() => {
     // Use Data Mock
     if (isDataMock) {
-      setDataInfos(userData.find((user) => user.id === parseInt(id)))
+      const formatter = new UserInfosFormatter()
+      setDataInfos(
+        formatter.format(userData.find((user) => user.id === parseInt(id)))
+      )
       setDataActivity(userActivity.find((user) => user.userId === parseInt(id)))
       setDataAverage(userAverage.find((user) => user.userId === parseInt(id)))
       setDataPerformance(
@@ -46,21 +51,38 @@ function Dashboard() {
     // Use API
     // Fetch data and save it in its state
     const getData = async () => {
-      const resultInfos = await fetchUserInfos(id)
-      setDataInfos(resultInfos)
+      try {
+        const resultInfos = await fetchUserInfos(id)
+        setDataInfos(resultInfos)
+        console.log(resultInfos)
 
-      const resultActivity = await fetchUserActivity(id)
-      setDataActivity(resultActivity)
+        const resultActivity = await fetchUserActivity(id)
+        setDataActivity(resultActivity)
 
-      const resultAverage = await fetchUserAverage(id)
-      setDataAverage(resultAverage)
+        const resultAverage = await fetchUserAverage(id)
+        setDataAverage(resultAverage)
 
-      const resultPerformance = await fetchUserPerformance(id)
-      setDataPerformance(resultPerformance)
+        const resultPerformance = await fetchUserPerformance(id)
+        setDataPerformance(resultPerformance)
+      } catch (error) {
+        setIsError(true)
+      }
+
       setIsLoading(false)
     }
     getData()
   }, [id, isDataMock])
+
+  if (isError) {
+    return (
+      <div className="container container-main">
+        <p className="loading">
+          Une erreur s'est produite lors de la requête serveur, veuillez essayer
+          avec les données mockées.
+        </p>
+      </div>
+    )
+  }
 
   if (isLoading) {
     return (
@@ -84,25 +106,25 @@ function Dashboard() {
           </div>
           <aside>
             <CardInfos
-              keyData={dataInfos.keyData.calorieCount}
+              keyData={dataInfos.calorieCount}
               image={calories}
               unit="kcal"
               type="Calories"
             />
             <CardInfos
-              keyData={dataInfos.keyData.proteinCount}
+              keyData={dataInfos.proteinCount}
               image={protein}
               unit="g"
               type="Proteines"
             />
             <CardInfos
-              keyData={dataInfos.keyData.carbohydrateCount}
+              keyData={dataInfos.carbohydrateCount}
               image={carbs}
               unit="g"
               type="Glucides"
             />
             <CardInfos
-              keyData={dataInfos.keyData.lipidCount}
+              keyData={dataInfos.lipidCount}
               image={fat}
               unit="g"
               type="Lipides"

@@ -1,3 +1,10 @@
+export class UserInfosFormatter {
+  format(userInfos) {
+    const userInfosFormatted = { ...userInfos, ...userInfos.keyData }
+    delete userInfosFormatted.keyData
+    return userInfosFormatted
+  }
+}
 /**
  * Get UserInfos from API
  * @param {string} id
@@ -6,7 +13,8 @@
 export async function fetchUserInfos(id) {
   const response = await fetch(`http://localhost:3001/user/${id}`)
   const result = await response.json()
-  return result.data
+  const formatter = new UserInfosFormatter()
+  return formatter.format(result.data)
 }
 
 /**

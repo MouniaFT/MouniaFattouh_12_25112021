@@ -30,6 +30,7 @@ function Home() {
               type="radio"
               value="mock"
               name="data"
+              defaultChecked={isDataMock}
               onChange={() => setIsDataMock(true)}
             />
             <span className="checkmark"></span>
