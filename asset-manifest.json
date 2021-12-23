@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MouniaFattouh_12_25112021/static/css/main.6a5ca49e.chunk.css",
-    "main.js": "/MouniaFattouh_12_25112021/static/js/main.4cdab653.chunk.js",
-    "main.js.map": "/MouniaFattouh_12_25112021/static/js/main.4cdab653.chunk.js.map",
+    "main.js": "/MouniaFattouh_12_25112021/static/js/main.cc5de007.chunk.js",
+    "main.js.map": "/MouniaFattouh_12_25112021/static/js/main.cc5de007.chunk.js.map",
     "runtime-main.js": "/MouniaFattouh_12_25112021/static/js/runtime-main.17e1944c.js",
     "runtime-main.js.map": "/MouniaFattouh_12_25112021/static/js/runtime-main.17e1944c.js.map",
     "static/js/2.f6954f92.chunk.js": "/MouniaFattouh_12_25112021/static/js/2.f6954f92.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.17e1944c.js",
     "static/js/2.f6954f92.chunk.js",
     "static/css/main.6a5ca49e.chunk.css",
-    "static/js/main.4cdab653.chunk.js"
+    "static/js/main.cc5de007.chunk.js"
   ]
 }
